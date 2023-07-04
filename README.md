@@ -9,47 +9,70 @@ Estou em constante busca pelo aprimoramento dos conhecimentos em Python, princip
 **Experiências em:** Python, Análise de Dados.
 
 
-# Project-Best-Selling-Gaming-Consoles-Dataset
+## Project-Best-Selling-Gaming-Consoles-Dataset 1972-2020
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/a19d7aa8-3a04-4e4d-98c9-a4793f41703b)
+
 
 ##### Sobre o Projeto
-Estou simulando uma análise sobre um projeto que visa identificar quais consoles foram mais vendidos 
+Estou simulando uma análise de dados sobre um projeto que visa identificar quais consoles de video game foram mais vendidos, contudo, tive a oportunidade de tirar alguns insights,
+ao logo da descrição do projeto vou mostrando a forma que cheguei até algumas conclusões. 
 
-
-# Passo 1: Importei todas a blibliotecas que vou utilizar.
-
-import pandas as pd
+##### Passo 1: Importei todas a blibliotecas que vou utilizar.
+```Python import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import plotly.express as px
-
-# Passo 2: Importei o arquivo csv para dentro de uma variável chamada dataset,
-# usando a biblioteca Pandas, no lugar do comando sep, pode usar o delimiter, para separar por ",".
-```python
-dataset = pd.read_csv("best_selling_game_consoles.csv", sep =',')
 ```
 
-# Passo 3: Abrir o dataset no python usando o comando DISPLAY.
+##### Passo 2: Importei o arquivo csv para dentro de uma variável chamada dataset,
+```python
+# Usando a biblioteca Pandas, no lugar do comando sep, pode usar o delimiter, para separar por ",".
 
+dataset = pd.read_csv("best_selling_game_consoles.csv", sep =',')
+```
+##### Passo 3: Abrir o dataset no python usando o comando DISPLAY.
+```Python
 display(dataset)
+```
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/20b85d72-1821-43eb-b081-14b10584771c)
+
+
+##### Passo 4 :Excluir uma coluna do dataset que não tinha fazia sentido para nossa análise.
+```Python
+# Usando a função DROP do Pandas passando o paramêtro axis= 1 que signigica coluna, assim excluí a coluna Remarks,
+dataset.drop('Remarks',axis=1)
+
+```
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/9af921a8-75f9-4543-8724-bacda7f05d8d)
 
 
 
-# Passo 4: Abrir o dataset usando o comando head(10), para exibir as 10 primeiras linhas do dataframe.
+
+##### Passo 5: Abrir o dataset usando o comando head(10), para exibir as 10 primeiras linhas do dataframe.
 ```python
 #Passo 4: Abrir o dataset usando o comando head(10), para exibir as 10 primeiras linhas do dataframe.
 display(dataset.head(10))
 ```
-![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/4ed91b29-6a19-43b7-a591-6c88adceec61)
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/017ec0b8-fb97-4020-b1d4-3ea202c7251e)
 
-# Passo 5: Mostrar o dataset somente o nome dos colunas, usar o comando ISNA(), 
+
+##### Passo 6: Mostrar o dataset somente o nome dos colunas, usar o comando ISNA(), 
+
+```python
 # apresenta linhas nulas, linhas sem informaçõa. e o camando SUM() soma todos esses compos nulos.
-
 print(dataset.isna().sum())
+```
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/87d7e11a-2ba5-458b-8ab0-4abfadb9c4a6)
 
 
-# Passo 6: Mostra informações resumidas do dataset, como quantidade de colunas, tipos de variáveis,
+
+##### Passo 7: Mostra informações resumidas do dataset, como quantidade de colunas, tipos de variáveis,
+```Python
 # quantidade de linhas e quantidade de linhas não nulas.
 display(dataset.info())
+```
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/b32bf6df-334c-4918-bfd8-cd9026c525f2)
+
 
 # Posso 7: Aplicando o comando DESCRIBE(), para apresentar um resumo de informações sobre o dataset.
 
