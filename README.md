@@ -97,14 +97,16 @@ display(media_company)
 ```
 ![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/c1b67913-0019-463c-b7e6-031cad8d0a79)
 
-# Passo 10: Transformação do dados dentro da várialvel Vendas_company em formato de dicionário, usando o comando TO_formato.       
+##### Passo 11: Transformação do dados dentro da várialvel Vendas_company em formato de dicionário, usando o comando TO_formato.       
+```Python
 vendas_company = vendas_company.to_dict()
 display(vendas_company)
+```
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/8f848a15-8ec2-485a-91ce-b7b5428be40e)
 
 
-
-# Passo 11: Colacando as informações do venda_company em duas lista, separadas
-
+##### Passo 12: Colacando as informações do venda_company em duas lista, separadas
+```Python
 labels = []
 values = []
 
@@ -112,12 +114,10 @@ for data in vendas_company['Units sold (million)']:
     labels.append(data)
     values.append(vendas_company['Units sold (million)'][data])
     
-    
+```
 
-#grafico = px.bar(media_company, x= "Company", y="Units sold (million)",)
-#grafico.show()
-
-# Passo 12: Criação do grafico de pizza com as informações contida no venda_company. usando a biblioteca Plotly express.
+##### Passo 13: Criação do grafico de pizza com as informações contida no venda_company. usando a biblioteca Plotly express.
+```Python
 # No entanto as informações ficaram inelegiveis.
 
 # Criando conjunto de dados
@@ -141,7 +141,7 @@ ax1.axis('equal')
 print(" Total de vendas de console por empresa")
 plt.show()
 
-
+```
 
 # Passo 13: Criando um novo gráfico de Barras, ficou  com a informações legiveis e melhor visualização 
 # usando a biblioteca Plotly express.
