@@ -74,20 +74,28 @@ display(dataset.info())
 ![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/b32bf6df-334c-4918-bfd8-cd9026c525f2)
 
 
-# Posso 7: Aplicando o comando DESCRIBE(), para apresentar um resumo de informações sobre o dataset.
-
+##### Posso 8: Aplicando o comando DESCRIBE(), para apresentar um resumo de informações sobre o dataset.
+```Python
 display(dataset.describe())
+```
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/cedab3b2-34b9-41c6-85e5-7460c8cddd3c)
 
-# Passo 8: Criei uma variável VENDAS_COMPANY, vai receber o total de vendas por companhia usando o comandos GROUPBY e SUM.
-
+##### Passo 9: Criei uma variável VENDAS_COMPANY, vai receber o total de vendas por companhia usando o comandos GROUPBY e SUM.
+```Python
 vendas_company = dataset[["Company","Units sold (million)","Console Name"]].groupby("Company").sum()
 display(vendas_company)
+```
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/8825852e-905e-4f9b-a4d4-95205bffa91c)
 
-# Passo 9: Criei uma variável MEDIA_COMPANY, vai receber a média de vendas por companhia usando
+##### Passo 10: Criei uma variável MEDIA_COMPANY, vai receber a média de vendas por companhia usando
+```Python
 # o comandos GROUPBY e SUM. Usei o comando ROUD(), para arrendor com 2 digitos depois da "," o resultado apresentado.
 media_company= dataset[["Company","Units sold (million)"]].groupby("Company").mean()
 media_company = round(media_company,2)
+
 display(media_company)
+```
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/c1b67913-0019-463c-b7e6-031cad8d0a79)
 
 # Passo 10: Transformação do dados dentro da várialvel Vendas_company em formato de dicionário, usando o comando TO_formato.       
 vendas_company = vendas_company.to_dict()
