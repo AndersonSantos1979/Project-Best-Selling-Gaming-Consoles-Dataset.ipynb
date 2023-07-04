@@ -1,7 +1,18 @@
+
+# Anderson Santos
+<sub>Engenheiro de Dados JR.</sub>
+
+Bacharelando em Ciência da Computação pela Universidade Ibirapuera (UNIB), com bons conhecimentos em  SQL e Python. Construo painéis e relatórios analíticos, em Python e Power BI, desde o levantamento de requisitos até a publicação online e análise dos dados, utilizando técnicas de Data Storytelling em busca da melhor solução para os clientes.
+
+Estou em constante busca pelo aprimoramento dos conhecimentos em Python, principalmente em bibliotecas como: Pandas, Numpy e outras que possam ser importante para analise de dados. Desta forma, consigo auxiliar a tomada de decisão através de boas estórias e análises! Além disso, possuo experiência há 11 como analista de suporte em algumas empresas de TI entre elas a Keyrus Brasil uma cia no ramo de dados.
+
+**Experiências em:** Python, Análise de Dados.
+
+
 # Project-Best-Selling-Gaming-Consoles-Dataset
 
-# Sobre o Projeto
-### Estou simulando ser um funcionário d
+##### Sobre o Projeto
+Estou simulando uma análise sobre um projeto que visa identificar quais consoles foram mais vendidos 
 
 
 # Passo 1: Importei todas a blibliotecas que vou utilizar.
