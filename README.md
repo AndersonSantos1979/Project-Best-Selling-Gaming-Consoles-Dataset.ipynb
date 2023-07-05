@@ -143,13 +143,17 @@ plt.show()
 
 ```
 
-# Passo 13: Criando um novo gráfico de Barras, ficou  com a informações legiveis e melhor visualização 
+##### Passo 13: Criando um novo gráfico de Barras, ficou  com a informações legiveis para melhor visualização das infomações.
+```Python
 # usando a biblioteca Plotly express.
 
 grafico = px.bar(vendas_company, x= "Company",y= "Units sold (million)",
                  title= "TOTAL DE VENDAS POR COMPANHIA",text_auto="Type")
 
 grafico.show()
+```
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/200f783c-d4bf-4ff2-8994-2fdba5d91069)
+
 
 # Passo 14: Criando um gráfico com as 5 principais empresas que mais venderam console.
 
