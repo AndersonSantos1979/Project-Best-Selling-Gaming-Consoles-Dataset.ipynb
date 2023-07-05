@@ -178,8 +178,7 @@ ax1.axis('equal')
 print(" TOTAL DE VENDAS PELAS 5 EMPRESAS DE CONSOLE QUEM MAIS VENDEU NO MUNDO")
 plt.show()
 ```
-![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/3f909be5-c40f-4c71-b193-316e4c2746f0)
-
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/26d8b1fb-eeab-4e13-ab96-07631977457b)
 
 
 
