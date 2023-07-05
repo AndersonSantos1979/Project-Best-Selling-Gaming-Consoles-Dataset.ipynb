@@ -155,8 +155,8 @@ grafico.show()
 ![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/200f783c-d4bf-4ff2-8994-2fdba5d91069)
 
 
-# Passo 14: Criando um gráfico com as 5 principais empresas que mais venderam console.
-
+##### Passo 14: Criando um gráfico com as 5 principais empresas que mais venderam console.
+```Python
 labels =('Atari','Microsoft','Nintendo','Sega','Sony')
 
 sizes= [33, 185, 883,78.40, 589.09]        
@@ -175,12 +175,14 @@ ax1.axis('equal')
 
 
 # Apresenta o gráfico
-print(" Total de vendas de consoles por empresa")
+print(" TOTAL DE VENDAS PELAS 5 EMPRESAS DE CONSOLE QUEM MAIS VENDEU NO MUNDO")
 plt.show()
+```
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/3f909be5-c40f-4c71-b193-316e4c2746f0)
 
 
 
-#total = tabela[["Company", "Units sold (million)"]]
+
 # Passo 16: ESSE DATASET VENDA_CAMPANY AS INFORMAÇÕES AGRUPADO PELA COLUNA "RELEASED YEAR" E CONTA O VALORES.
 vendas_company = dataset[['Console Name',"Company","Type","Units sold (million)",
                             'Released Year']].groupby("Released Year",as_index=False).value_counts()
