@@ -182,17 +182,22 @@ plt.show()
 
 
 
-# Passo 16: ESSE DATASET VENDA_CAMPANY AS INFORMAÇÕES AGRUPADO PELA COLUNA "RELEASED YEAR" E CONTA O VALORES.
+##### Passo 16: ESSE DATASET VENDA_CAMPANY AS INFORMAÇÕES AGRUPADO PELA COLUNA "RELEASED YEAR" E CONTA O VALORES.
+```Python
 vendas_company = dataset[['Console Name',"Company","Type","Units sold (million)",
                             'Released Year']].groupby("Released Year",as_index=False).value_counts()
 display(vendas_company)
+```
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/93d8bc41-fb7e-4ed1-98bc-77f3ee90f650)
 
 
-# Passo 17: Usando o comando LOC, para exiber as informações de todos os consoles vendidos pela Nitendo.
+##### Passo 17: Usando o comando LOC, para exiber as informações de todos os consoles vendidos pela Nitendo.
+```Python
 vendas_Nintendo = dataset.loc[(dataset["Company"] == "Nintendo")]
                             
 display(vendas_Nintendo)
-
+```
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/4bd2ec5a-cd17-4687-97e7-5c52be427bcb)
 
 
 # Passo 18: Usando a biblioteca Plotly Exepress para criar gráfico de barras usando alguns 
