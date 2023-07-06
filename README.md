@@ -116,32 +116,6 @@ for data in vendas_company['Units sold (million)']:
     
 ```
 
-##### Passo 13: Criação do grafico de pizza com as informações contida no venda_company. usando a biblioteca Plotly express.
-```Python
-# No entanto as informações ficaram inelegiveis.
-
-# Criando conjunto de dados
-
-labels=list(labels)
-sizes=values        
-
-
-# Criando a representação da área da plotagem
-
-fig1, ax1 = plt.subplots(figsize=(12,7))
-
-# Criando o gráfico
-
-ax1.pie(sizes,labels=labels,autopct='%1.0f%%' ,shadow=True, startangle=90)
-
-# Opção para gráficar ficar em circulo
-ax1.axis('equal')
-
-# Apresenta o gráfico
-print(" Total de vendas de console por empresa")
-plt.show()
-
-```
 
 ##### Passo 13: Criando um novo gráfico de Barras, ficou  com a informações legiveis para melhor visualização das infomações.
 ```Python
@@ -152,7 +126,8 @@ grafico = px.bar(vendas_company, x= "Company",y= "Units sold (million)",
 
 grafico.show()
 ```
-![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/200f783c-d4bf-4ff2-8994-2fdba5d91069)
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/ca7995f1-e38a-48e2-8ce7-006949073053)
+
 
 
 ##### Passo 14: Criando um gráfico com as 5 principais empresas que mais venderam console.
@@ -182,7 +157,7 @@ plt.show()
 
 
 
-##### Passo 16: ESSE DATASET VENDA_CAMPANY AS INFORMAÇÕES AGRUPADO PELA COLUNA "RELEASED YEAR" E CONTA O VALORES.
+##### Passo 15: ESSE DATASET VENDA_CAMPANY AS INFORMAÇÕES AGRUPADO PELA COLUNA "RELEASED YEAR" E CONTA O VALORES.
 ```Python
 vendas_company = dataset[['Console Name',"Company","Type","Units sold (million)",
                             'Released Year']].groupby("Released Year",as_index=False).value_counts()
@@ -191,33 +166,49 @@ display(vendas_company)
 ![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/93d8bc41-fb7e-4ed1-98bc-77f3ee90f650)
 
 
-##### Passo 17: Usando o comando LOC, para exiber as informações de todos os consoles vendidos pela Nitendo.
+##### Passo 16: Usando o comando LOC, para exiber as informações de todos os consoles vendidos pela Nitendo.
 ```Python
 vendas_Nintendo = dataset.loc[(dataset["Company"] == "Nintendo")]
                             
 display(vendas_Nintendo)
+
+
 ```
+#### VENDAS TOTAL DA EMPRESA NINTENDO POR CONSOLE
 ![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/4bd2ec5a-cd17-4687-97e7-5c52be427bcb)
 
 
-# Passo 18: Usando a biblioteca Plotly Exepress para criar gráfico de barras usando alguns 
+##### Passo 17: Usando a biblioteca Plotly Exepress para criar gráfico de barras usando alguns 
+```Python
 # paramentros como color, text_auto e title.
 grafico = px.bar(vendas_Nintendo, x="Console Name",y= "Units sold (million)",color = "Type", text_auto=True,
                  title = "VENDAS TOTAL DA NITENDO POR CONSOLE")
 # Usando comoando show para exibir o gráfico.
 grafico.show()
+```
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/79a626ac-a817-4da5-bd39-388e84ca5247)
 
-# Passo 19: Usando o comando LOC, para exiber as informações de todos os consoles vendidos pela Sony.
+##### Passo 18: Usando o comando LOC, para exiber as informações de todos os consoles vendidos pela Sony.
+```Python
 vendas_Sony = dataset.loc[(dataset["Company"] == "Sony")]
                             
 display(vendas_Sony)
 
-# Passo 20: Usando a biblioteca Plotly Exepress para criar gráfico de barras usando alguns 
+
+```
+#### VENDAS TOTAL DA EMPRESA SONY POR CONSOLE
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/83597619-5d50-484a-8de3-968e9f31b707)
+
+##### Passo 19: Usando a biblioteca Plotly Exepress para criar gráfico de barras usando alguns 
+```Python
 # paramentros como color, text_auto, title e Barmode.
 grafico = px.bar(vendas_Sony, x="Console Name",y= "Units sold (million)",color = "Type",
                  title = "VENDAS TOTAL DA SONY POR CONSOLE",text_auto='Type',barmode='group')
 # Usando comoando show para exibir o gráfico.
 grafico.show()
+```
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/4dd710c1-5912-4eca-9971-3737fc12840b)
+
 
 # Passo 21: Usando o comando LOC, para exiber as informações de todos os consoles vendidos pela Microsoft.
 vendas_Microsoft = dataset.loc[(dataset["Company"] == "Microsoft")]
