@@ -210,40 +210,44 @@ grafico.show()
 ![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/4dd710c1-5912-4eca-9971-3737fc12840b)
 
 
-# Passo 21: Usando o comando LOC, para exiber as informações de todos os consoles vendidos pela Microsoft.
+##### Passo 20: Usando o comando LOC, para exiber as informações de todos os consoles vendidos pela Microsoft.
+```Python
 vendas_Microsoft = dataset.loc[(dataset["Company"] == "Microsoft")]
                             
 display(vendas_Microsoft)
 
-# Passo 26: Colocando um dataset formato parquet em uma váriavel chamada Vendas_company e exibindo com comando Display.
+```
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/7e525d52-e270-4bd0-9f53-7ab9611488e0)
 
-vendas_company = dataset[['Company',"Console Name","Type","Units sold (million)",
-                            'Released Year']].groupby("Company",as_index=False).value_counts()
-display(vendas_company)
-type(vendas_company)
+##### Passo 21 : Usando a biblioteca Plotly Exepress para criar gráfico de barras usando alguns 
+```Python
+# paramentros como color, text_auto, title e Barmode.
+grafico = px.bar(vendas_Microsoft, x="Console Name",y= "Units sold (million)",color = "Type",
+                 title = "VENDAS TOTAL DA MICROSOFT POR CONSOLE",text_auto='Type',barmode='group')
+# Usando comoando show para exibir o gráfico.
+grafico.show()
+```
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/7a27006b-56b2-4636-a3dc-63481ffd3922)
 
-# Passo 23: Usando o comando LOC, para exiber as informações de todos os consoles vendidos pela Sega.
+
+##### Passo 22: Usando o comando LOC, para exiber as informações de todos os consoles vendidos pela Sega.
+```Python
 vendas_Sega = dataset.loc[(dataset["Company"] == "Sega")]
                             
 display(vendas_Sega)
+```
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/36e524ca-d536-41ca-84a1-e566c0f30a9e)
 
-# Passo 24: Usando a biblioteca Plotly Exepress para criar gráfico de barras usando alguns 
-# paramentros como color, text_auto, title e Barmode.
 
+##### Passo 23: Usando a biblioteca Plotly Exepress para criar gráfico de barras usando alguns 
+##### paramentros como color, text_auto, title e Barmode.
+```Python
 grafico = px.bar(vendas_Sega, x="Console Name",y= "Units sold (million)",color = "Type",
                  title = "VENDAS TOTAL DA SEGA POR CONSOLE ",text_auto= True,barmode="relative")
 # Usando comoando show para exibir o gráfico
 grafico.show()
+```
+![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/4b186817-197d-4985-87b2-c88f2ce3939f)
 
-# Tipo de arquivo com extesão PARQUET
 
-# Passo 25:  Transformar um arquivo csv em parquet usando comando TO_
 
-dataset.to_parquet('C:/Users/Keyrus/Documents/Scripts Python/Atividades/best_selling_game_consoles.parquet')
-
-# Passo 26: Colocando um dataset formato parquet em uma váriavel chamada Vendas_company e exibindo com comando Display.
-
-vendas_company = dataset[['Company',"Console Name","Type","Units sold (million)",
-                            'Released Year']].groupby("Company",as_index=False).value_counts()
-display(vendas_company)
-type(vendas_company)
