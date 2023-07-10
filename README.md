@@ -15,7 +15,7 @@ Estou em constante busca pelo aprimoramento dos conhecimentos em Python, princip
 
 ##### Sobre o Projeto
 Estou simulando uma análise de dados sobre um projeto que visa identificar quais consoles de video game foram mais vendidos, contudo, tive a oportunidade de tirar alguns insights,
-ao logo da descrição do projeto vou mostrando a forma que cheguei até algumas conclusões. 
+ao logo do projeto vou mostrando a forma que cheguei até algumas conclusões. 
 
 ##### Passo 1: Importei todas a blibliotecas que vou utilizar.
 ```Python
@@ -127,7 +127,11 @@ grafico = px.bar(vendas_company, x= "Company",y= "Units sold (million)",
 
 grafico.show()
 ```
+
 ![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/ca7995f1-e38a-48e2-8ce7-006949073053)
+
+#### No primeiro gráfico consiguimos perceber logo duas empresas que destacam-se pelo total de vendas, Nintendo e Sony, foram $ 883.11 milhões de dolares e $ 589.09 milhões de dolares respectivamente. Abaixo vou detalhar quais foram os consoles e tipo que mais alavancaram as vendas desta duas empresas.
+
 
 
 
