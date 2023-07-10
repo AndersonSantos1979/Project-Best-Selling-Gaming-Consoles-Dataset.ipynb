@@ -6,16 +6,15 @@ Bacharelado em Ciência da Computação pela Universidade Ibirapuera (UNIB) e es
 
 Estou em constante busca pelo aprimoramento dos conhecimentos em Python, principalmente em bibliotecas como: Pandas, Numpy e outras que possam ser importante para analise de dados. Desta forma, consigo auxiliar a tomada de decisão através de boas estórias e análises! Além disso, possuo experiência há 11 como analista de suporte em algumas empresas de TI entre elas a Keyrus Brasil uma cia no ramo de dados.
 
-**Experiências em:** Python, Análise de Dados.
+**Experiências em:** Python, Análise de Dados e SQL
 
 
 ## Project-Best-Selling-Gaming-Consoles-Dataset 1972-2020
 ![image](https://github.com/AndersonSantos1979/Project-Best-Selling-Gaming-Consoles-Dataset.ipynb/assets/75112037/a19d7aa8-3a04-4e4d-98c9-a4793f41703b)
 
 
-##### Sobre o Projeto
-Estou simulando uma análise de dados sobre um projeto que visa identificar quais consoles de video game foram mais vendidos, contudo, tive a oportunidade de tirar alguns insights,
-ao logo do projeto vou mostrando a forma que cheguei até algumas conclusões. 
+#### Sobre o Projeto
+#### Estou simulando uma análise de dados sobre um projeto que visa identificar quais consoles de video game foram mais vendidos, contudo, tive a oportunidade de tirar alguns insights, ao logo do projeto vou mostrando a forma que cheguei até algumas conclusões. 
 
 ##### Passo 1: Importei todas a blibliotecas que vou utilizar.
 ```Python
