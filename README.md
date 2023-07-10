@@ -18,7 +18,8 @@ Estou simulando uma análise de dados sobre um projeto que visa identificar quai
 ao logo da descrição do projeto vou mostrando a forma que cheguei até algumas conclusões. 
 
 ##### Passo 1: Importei todas a blibliotecas que vou utilizar.
-```Python import pandas as pd
+```Python
+import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import plotly.express as px
